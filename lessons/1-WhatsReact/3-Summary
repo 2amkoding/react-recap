@@ -1,0 +1,12 @@
+When the state or the data of a component changes, React updates the
+corresponding node in the virtual DOM to reflect the new state. Then, it compares
+the current version of virtual DOM with the previous version to identify the nodes
+that should be updated. It’ll then update those nodes in the actual DOM.
+
+In browser-based apps, updating the DOM is done by a companion library called
+ReactDOM. In mobile apps, React Native uses native components to render the
+user interface.
+
+Since React is just a library and not a framework like Angular or Vue, we often
+need other tools for concerns such as routing, state management,
+internationalization, form validation
