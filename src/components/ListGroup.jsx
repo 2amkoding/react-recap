@@ -9,19 +9,28 @@ function ListGroup() {
 
   items = [];
 
+  const sharedBlockStyles =
+    "w-48 text-lg font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white";
+
   return (
     <>
-      <h1 className="w-48 text-lg font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-        Title
-      </h1>
+      <div className={sharedBlockStyles}>
+        <h1 className="px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+          Title
+        </h1>
 
-      { items.length === 0 && <p>No item found</p> }
-
-      <ul className="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+        {items.length === 0 && <p className="p-4">No item found</p>}
+        <ul>
+          {items.map((item) => (
+            <li
+              className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600"
+              key={item}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
